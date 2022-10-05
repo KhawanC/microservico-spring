@@ -36,7 +36,7 @@ public class WorkerResource {
 	
 	@PostMapping
 	public ResponseEntity<Worker> createWorker(@RequestBody WorkerForm form) {
-		return new ResponseEntity<>(workerService.saveWorker(form), HttpStatus.OK);
+		return new ResponseEntity<>(workerService.saveWorker(form), HttpStatus.CREATED);
 	}
 	
 	@DeleteMapping("{id}")
