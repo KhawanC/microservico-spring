@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.kaua.hrpayroll.dto.WorkerResponse;
 
 @Component
-@FeignClient(name = "hr-worker", url = "localhost:8080", path = "/worker")
+@FeignClient(name = "hr-worker", path = "/worker")
 public interface WorkerFeign {
 
 	@GetMapping("{id}")
