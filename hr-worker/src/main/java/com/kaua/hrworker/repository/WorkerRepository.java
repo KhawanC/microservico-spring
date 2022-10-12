@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.kaua.hrworker.model.Worker;
 
 @Repository
-public interface WorkerRepository extends JpaRepository<Worker, Long>{
+public interface WorkerRepository extends JpaRepository<Worker, Long> {
 
 }
