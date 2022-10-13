@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kaua</groupId>
-	<artifactId>hr-eureka-server</artifactId>
+	<artifactId>hr-eureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hr-eureka-server</name>
+	<name>hr-eureka</name>
 	<description>Eureka Service Microservice</description>
 
 	<properties>

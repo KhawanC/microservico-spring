@@ -29,6 +29,11 @@ public class RoleResource {
 		return new ResponseEntity<>(service.findAll(), HttpStatus.OK);
 	}
 	
+	@GetMapping("/name")
+	public ResponseEntity<Role> findByRoleName(@RequestBody RoleEnum roleName) {
+	    return new ResponseEntity<>(service.findByName(roleName).get(), HttpStatus.OK);
+	}
+	
 	@PostMapping
 	public ResponseEntity<Role> save(@RequestBody RoleEnum form) {
 		return new ResponseEntity<>(service.save(form), HttpStatus.OK);

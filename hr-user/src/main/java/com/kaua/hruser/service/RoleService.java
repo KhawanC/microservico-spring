@@ -1,6 +1,7 @@
 package com.kaua.hruser.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,10 @@ public class RoleService {
 
 	public List<Role> findAll() {
 		return repository.findAll();
+	}
+	
+	public Optional<Role> findByName(RoleEnum roleName) {
+	    return repository.findByRoleName(roleName);
 	}
 
 	public Role save(RoleEnum roleName) {

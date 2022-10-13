@@ -9,7 +9,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @Configuration
 public class AppConfig {
 
-	@Value("${secret.oauth.key}")
+	@Value("${secret.bcrypt.key}")
 	String secretKey;
 	
 	@Bean

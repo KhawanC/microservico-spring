@@ -29,8 +29,11 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter{
 	@Autowired
 	AuthenticationManager authManager;
 	
-	@Value("${secret.app.credential}")
-	String secretKey;
+	@Value("${secret.oauth.name}")
+	String oauthName;
+	
+	@Value("${secret.oauth.password}")
+	String oauthPassword;
 
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
@@ -40,8 +43,8 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter{
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory()
-		.withClient("KauaApp")
-		.secret(encoder.encode(secretKey))
+		.withClient(oauthName)
+		.secret(encoder.encode(oauthPassword))
 		.scopes("read", "write")
 		.authorizedGrantTypes("password")
 		.accessTokenValiditySeconds(86400);
